@@ -17,37 +17,46 @@
     <div class="row justify-content-center">
         <div class="col-lg-8 col-md-10 col-12">
             <div class="card shadow-lg border-0 rounded-3">
-                <div class="card-body p-4">
-                    <h2 class="text-center text-primary mb-4">Upload Your Resume</h2>
+                <div class="card-body p-5">
+                    <h2 class="text-center text-primary mb-4">Submit Your Resume and Portfolio</h2>
                     <form method="POST" enctype="multipart/form-data" action="/upload">
                         
                         <!-- Name Field -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="name" class="form-label">Full Name:</label>
-                            <input type="text" name="name" class="form-control" placeholder="Enter your full name" required>
+                            <input type="text" name="name" class="form-control rounded-pill" placeholder="Enter your full name" required>
                         </div>
 
                         <!-- Email Field -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="email" class="form-label">Email:</label>
-                            <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+                            <input type="email" name="email" class="form-control rounded-pill" placeholder="Enter your email address" required>
                         </div>
 
                         <!-- Skills Field -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="skills" class="form-label">Skills (comma-separated):</label>
-                            <input type="text" name="skills" class="form-control" placeholder="e.g., Python, HTML, CSS">
+                            <input type="text" name="skills" class="form-control rounded-pill" placeholder="e.g., Python, HTML, CSS">
+                        </div>
+
+                        <!-- Portfolio Link Field -->
+                        <div class="mb-4">
+                            <label for="portfolio" class="form-label">Portfolio Link:</label>
+                            <input type="url" name="portfolio" class="form-control rounded-pill" placeholder="https://yourportfolio.com">
+                            <small class="form-text text-muted">Share a link to showcase your work (optional).</small>
                         </div>
 
                         <!-- Resume File Upload -->
-                        <div class="mb-3">
+                        <div class="mb-4">
                             <label for="resume" class="form-label">Resume (PDF only):</label>
                             <input type="file" name="resume" class="form-control" accept=".pdf" required>
                         </div>
 
                         <!-- Submit Button -->
                         <div class="d-grid">
-                            <button type="submit" class="btn btn-primary py-2">Upload Resume</button>
+                            <button type="submit" class="btn btn-primary py-3 rounded-pill font-weight-bold">
+                                Submit Application
+                            </button>
                         </div>
                     </form>
                 </div>

@@ -5,4 +5,3 @@ flask-login
 flask-wtf
 werkzeug
 wtforms
-gridfs
