@@ -37,7 +37,7 @@ train_data = [
     ("Seeking an expert in database technologies like MySQL, MongoDB, and Oracle.", {"entities": [(48, 53, "TECH"), (55, 62, "TECH"), (68, 74, "TECH")]}),
     ("Experienced system administrator knowledgeable in Linux, Windows Server, and networking.", {"entities": [(50, 55, "TECH"), (57, 71, "TECH"), (77, 87, "TECH")]}),
 
-]
+] 
 
 # Train NER
 other_pipes = [pipe for pipe in nlp.pipe_names if pipe != 'ner']

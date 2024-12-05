@@ -2,13 +2,79 @@
 
 {% block content %}
 <div class="container mt-5">
-    <h1 class="mb-4">Resume Matching System</h1>
-    <form method="POST" action="/match">
-        <div class="mb-3">
-            <label for="job_description" class="form-label">Enter Job Description:</label>
-            <textarea class="form-control" id="job_description" name="job_description" rows="4"></textarea>
+    <!-- Heading Section -->
+    <h1 class="text-center text-primary mb-5" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">Resume Matching System</h1>
+
+    <!-- Form Section -->
+    <form method="POST" action="/match" class="shadow-lg p-4 mb-5 bg-white rounded">
+        <div class="mb-4">
+            <label for="job_description" class="form-label fs-5 text-muted">Enter Job Description:</label>
+            <textarea class="form-control rounded-3 shadow-sm" id="job_description" name="job_description" rows="6" placeholder="Describe the job role you're looking to fill..."></textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Match Resumes</button>
+
+        <div class="d-grid gap-2">
+            <button type="submit" class="btn btn-gradient btn-lg fw-bold text-white shadow-lg">Match Resumes</button>
+        </div>
     </form>
 </div>
+
+<!-- Custom Styles -->
+<style>
+    /* Page Background and Container */
+    body {
+        background-color: #f8f9fa; /* Light gray background */
+    }
+
+
+    /* Heading Style */
+    h1 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #007bff;
+        text-transform: uppercase;
+    }
+
+    /* Form Elements Styling */
+    .form-label {
+        font-size: 1.1rem;
+        font-weight: 500;
+    }
+
+    .form-control {
+        font-size: 1rem;
+        border-radius: 10px;
+        padding: 12px;
+        background-color: #f1f1f1;
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    }
+
+    /* Button Styling */
+    .btn-gradient {
+        background: linear-gradient(90deg, #007bff, #6f42c1);
+        border: none;
+        border-radius: 30px;
+        padding: 15px;
+        font-size: 1.1rem;
+        font-weight: 600;
+        transition: background 0.3s ease;
+    }
+
+    .btn-gradient:hover {
+        background: linear-gradient(90deg, #0056b3, #5a2d98);
+    }
+
+    /* Add subtle shadow and hover effect on form button */
+    .btn-lg {
+        transition: transform 0.2s ease;
+    }
+
+    .btn-lg:hover {
+        transform: scale(1.05);
+    }
+</style>
+
 {% endblock %}
